@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="FRCJSONlib/bin/FRCusb6880lib_json.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/FRCJSONlib/FRCusb6880jsonlib_description.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=FRCJSONlib/src&lt;frcJsonParser{testJsonLib.java[testJsonLib" manifestLocation="/FRCJSONlib/FRCusb6880json_manifest.txt" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal>
+                <package handleIdentifier="=FRCJSONlib/src&lt;frcJsonParser"/>
+            </packagesToSeal>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/FRCJSONlib/.project"/>
+        <javaElement handleIdentifier="=FRCJSONlib/src"/>
+        <file path="/FRCJSONlib/.classpath"/>
+    </selectedElements>
+</jardesc>
