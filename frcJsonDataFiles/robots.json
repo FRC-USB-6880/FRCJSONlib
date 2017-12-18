@@ -3,7 +3,7 @@
         "RobotWidth" : 23.0,
         "RobotLength" : 30.0,
         "WheelDiameter" : 6.0,
-        "navxPosition" : [0.0, 0.0],
+        "NavXPos" : [0.0, 0.0],
         "DriveTrain" : "6Wheel-4Motor-WestCoastDrive",
         "Sensors" : [],
         "Actuators" : [],

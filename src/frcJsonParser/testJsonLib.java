@@ -14,8 +14,8 @@ public class testJsonLib {
      */
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        RobotSpecs robotSpecs = new RobotSpecs(args[0]);
-        robotSpecs.parseJsonFile("2017-offseason-robot");
+        RobotSpecs robotSpecs = new RobotSpecs(args[0], "2017-offseason-robot");
+        
     }
 
 }
