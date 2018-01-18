@@ -1,11 +1,67 @@
 {
-    "6Wheel-4Motor-WestCoastDrive" : {
-        "motorL1" : "CIM",
-        "motorL2" : "CIM",
-        "motorR1" : "CIM",
-        "motorR2" : "CIM",
+    "4VictorSP-1spd-WestCoastDrive" : {
+        "L1" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 0
+        },
+        "L2" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 1
+        },
+        "R1" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 2
+        },
+        "R2" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 3
+        },
         "gearRatioL" : 10.71,
         "gearRatioR" : 10.71,
-        "wheelType" : "6inch-higrip-wheel"
+        "LeftEncoder" : {
+            "encoderType" : "E4T-Miniature-Optical-Encoder",
+            "encoderChannels" : [0,1]
+         },
+        "RightEncoder" : {
+            "encoderType" : "E4T-Miniature-Optical-Encoder",
+            "encoderChannels" : [2,3]
+         },
+        "wheelType" : "6inch-higrip-wheel-grey"
+    },
+    "CAN-4TalonSRX-2spd-WestCoastDrive" : {
+        "L1" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 0
+        },
+        "L2" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 1,
+            "Follower" : true,
+            "LeadController" : "L1"
+        },
+        "R1" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 2
+        },
+        "R2" : {
+            "Controller" : "VictorSP",
+            "Motor" : "CIM",
+            "Channel" : 3,
+            "Follower" : true,
+            "LeadController" : "R1"
+        },
+        "gearRatioL_loSpd" : 15.0,
+        "gearRatioR_loSpd" : 15.0,
+        "gearRatioL_hiSpd" : 5.0,
+        "gearRatioR_hiSpd" : 5.0,
+        "Comment1" : "Need to add pneumatics info for gear shifting",
+        "wheelType" : "6inch-higrip-wheel-grey"
     }
 }

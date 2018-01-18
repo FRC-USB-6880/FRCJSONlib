@@ -13,21 +13,21 @@ public class NavOptionsReader extends JsonReader {
     public NavOptionsReader(String filePath, String navOptStr) {
         super(filePath);
         try {
-            String key = JsonReader.getRealKeyIgnoreCase(rootObj, navOptStr);
+            String key = JsonReader.getKeyIgnoreCase(rootObj, navOptStr);
             this.navOptObj =(JSONObject) rootObj.get(key);
-            key = JsonReader.getRealKeyIgnoreCase(navOptObj, "LineFollow");
+            key = JsonReader.getKeyIgnoreCase(navOptObj, "LineFollow");
             if (key != null) {
                 lfObj = (JSONObject) navOptObj.get(key);
             }
-            key = JsonReader.getRealKeyIgnoreCase(navOptObj, "IMU");
+            key = JsonReader.getKeyIgnoreCase(navOptObj, "IMU");
             if (key != null) {
                 imuObj = (JSONObject) navOptObj.get(key);
             }
-            key = JsonReader.getRealKeyIgnoreCase(navOptObj, "RangeSensor");
+            key = JsonReader.getKeyIgnoreCase(navOptObj, "RangeSensor");
             if (key != null) {
                 rangeObj = (JSONObject) navOptObj.get(key);
             }
-            key = JsonReader.getRealKeyIgnoreCase(navOptObj, "DriveSysEncoderVariables");
+            key = JsonReader.getKeyIgnoreCase(navOptObj, "DriveSysEncoderVariables");
             if (key != null) {
                 encoderVarsObj = (JSONObject) navOptObj.get(key);
             }
@@ -53,7 +53,7 @@ public class NavOptionsReader extends JsonReader {
         String key=null;
         JSONObject lightSensorObj;
         try {
-            key = JsonReader.getRealKeyIgnoreCase(lfObj, "LightSensor");
+            key = JsonReader.getKeyIgnoreCase(lfObj, "LightSensor");
             lightSensorObj = (JSONObject) lfObj.get(key);
             lightSensorName = getString(lightSensorObj, "name");
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class NavOptionsReader extends JsonReader {
         String sensorType = null;
         JSONObject lightSensorObj;
         try {
-            String key = JsonReader.getRealKeyIgnoreCase(lfObj, "LightSensor");
+            String key = JsonReader.getKeyIgnoreCase(lfObj, "LightSensor");
             lightSensorObj = (JSONObject) lfObj.get(key);
             sensorType = getString(lightSensorObj, "type");
         } catch (Exception e) {

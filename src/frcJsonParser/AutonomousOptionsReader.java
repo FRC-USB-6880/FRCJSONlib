@@ -13,7 +13,7 @@ public class AutonomousOptionsReader extends JsonReader {
 
         super(filePath);
         try {
-            String key = getRealKeyIgnoreCase(rootObj, autonomousOption);
+            String key = getKeyIgnoreCase(rootObj, autonomousOption);
             tasks = (JSONArray) rootObj.get(key);
         } catch (Exception e) {
             e.printStackTrace();

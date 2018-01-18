@@ -24,10 +24,10 @@ public class RobotConfigReader extends JsonReader {
         }
     }
 
-    public String getDriveSysName(){
+    public String getDriveTrainName(){
         String name = null;
         try{
-            name = getString(robotObj, "driveSystem");
+            name = getString(robotObj, "DriveTrain");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -48,17 +48,6 @@ public class RobotConfigReader extends JsonReader {
             System.out.println("frc6880: navigation key not found for the robot named "+robotName);
         }
         return (navigationOption);
-    }
-
-    public String getString(String key) {
-        String value=null;
-        try {
-            value = getString(robotObj, key);
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("frc6880: key "+key+" not found for the robot named "+robotName);
-        }
-        return (value);
     }
 
     public String[] getAttachments(String autoOrTeleop) {
@@ -85,16 +74,19 @@ public class RobotConfigReader extends JsonReader {
         return (attachmentsArr);
     }
 
-    public double getDistanceBetweenWheels() {
+    public double getRobotWidth() {
         double value = 0.0;
         try {
-            value = getDouble(robotObj, "distanceBetweenWheels");
-            System.out.println("frc6880: getDistanceBetweenWheels(): value=" + value);
+            value = getDouble(robotObj, "RobotWidth");
         } catch (Exception e) {
+            System.out.println("frc6880: getRobotWidth(): Could not retrieve the RobotWidth");
             e.printStackTrace();
         }
         return (value);
     }
     
-
+    public void printForDebug() {
+        System.out.println("RobotWidth = " + getRobotWidth());
+        System.out.println("DriveSystem = " + getDriveTrainName());
+    }
 }

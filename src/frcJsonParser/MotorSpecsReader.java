@@ -9,7 +9,7 @@ public class MotorSpecsReader extends JsonReader {
     public MotorSpecsReader(String filePath, String motorType) {
         super(filePath);
         try {
-            motorType = JsonReader.getRealKeyIgnoreCase(rootObj, motorType);
+            motorType = JsonReader.getKeyIgnoreCase(rootObj, motorType);
             motorObj = (JSONObject) rootObj.get(motorType);
             this.motorType = motorType;
         } catch (Exception e) {

@@ -1,6 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: frcJsonParser.testJsonLib
-
-Name: frcJsonParser/
-Sealed: true
 

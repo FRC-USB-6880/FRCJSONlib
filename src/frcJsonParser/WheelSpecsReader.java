@@ -9,7 +9,7 @@ public class WheelSpecsReader extends JsonReader {
     public WheelSpecsReader(String filePath, String wheelType) {
         super(filePath);
         try {
-            wheelType = getRealKeyIgnoreCase(rootObj, wheelType);
+            wheelType = getKeyIgnoreCase(rootObj, wheelType);
             wheelSpecObj =  (JSONObject) rootObj.get(wheelType);
             this.wheelType = wheelType;
         } catch (Exception e) {
